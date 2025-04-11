@@ -1,0 +1,33 @@
+$blue: #146DA5;
+$orange: #E6722E;
+$gray-600: #EDEDED;
+$navbar-light-hover-color: #cf1039;
+$navbar-light-active-color: #cf1039;
+$dropdown-link-hover-color: #cf1039;
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+* {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.dropdown-item.active {
+  background-color: transparent !important;
+  color: $dropdown-link-hover-color !important;
+}
+.dropdown-item:hover {
+  background-color: transparent;
+  color: $dropdown-link-hover-color;
+}
+
+.nav-link.dropdown-toggle:hover {
+  color: rgba(var(--#{$prefix}emphasis-color-rgb), .8);
+}
+
+.btn-orange {
+  background-color: $orange;
+
+  &:hover {
+    background-color: #E7B789;
+  }
+}

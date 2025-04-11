@@ -1,0 +1,54 @@
+/* Carousel Styling */
+.carousel-overlay,
+.container {
+  .card-title,
+  .card-text {
+    background-color: rgba(237, 237, 237, 0.75);
+    padding: 10px;
+    margin: 1px;
+  }
+
+  .card-title {
+    color: rgb(16, 85, 128);
+    font-weight: bold;
+  }
+
+  .card-text {
+    color: rgb(134, 69, 8);
+  }
+}
+
+/* Carousel Zoom */
+@keyframes slowZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+.carousel-item img.zoom-animation {
+  object-fit: cover;
+  animation: slowZoom 10s ease-in-out forwards;
+}
+
+/* Footer Styling */
+footer li,
+footer a {
+  color: white;
+  text-decoration: none;
+  transition: color .5s;
+}
+
+footer a:hover {
+    color: #FFD9A9;
+}
+
+.contact-us a {
+  text-decoration: underline;
+}
+
+#testing {
+  padding-left: 100px !important;
+}
