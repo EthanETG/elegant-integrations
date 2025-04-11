@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicons -->
+  <link rel="icon" sizes="192x192" href="/assets/images/favicons/icon.jpg" type="image/jpeg">
+  <link rel="shortcut icon" href="/assets/images/favicons/shortcut-icon.jpg" type="image/jpeg">
+  <link rel="apple-touch-icon" href="/assets/images/favicons/apple-touch-icon.jpg" type="image/jpeg">
+  <title>Contact - Elegant Integrations</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/assets/css/bootstrap.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- EmailJS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+
+  <!-- EmailJS Public Key -->
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "JCjzqZXuD9kycuPa7",
+      });
+    })();
+  </script>
+</head>
+
+<body>
+  <!-- START HEADER -->
+  <header class="d-flex justify-content-evenly bg-primary pt-2 pb-3">
+    <img src="/assets/images/logo.avif" alt="Elegant Integrations" width="249px" height="102px">
+    <div class="d-block text-end fs-4 text-white fw-bold">
+      <img src="/assets/images/control4-dealer-icon.avif" alt="Control4 Gold Dealer" width="239px" height="47px">
+      <p>(954) 648-2358</p>
+    </div>
+  </header>
+  <!-- END HEADER -->
+  <!-- START NAVBAR -->
+  <nav id="navbar" class="navbar navbar-expand-lg text-center sticky-top bg-white">
+    <div class="mx-auto">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              About Us
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/our-story/">Our Story</a></li>
+              <li><a class="dropdown-item" href="/reviews/">Reviews</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/services/">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/products/">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/contact/">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- END NAVBAR -->
+
+  <!-- START HERO -->
+  <section class="hero mb-5">
+    <!-- Section One -->
+    <div class="bg-secondary pt-5 pb-1">
+      <div class="section-one container mb-4">
+        <div class="row justify-content-center align-items-center">
+          <!-- Right Side -->
+          <div class="col-md-6 text-end pe-5">
+            <h1 class="fw-bold">Contact Us</h1>
+            <h4 class="fw-bold my-3" style="color: #E6722E;">
+              Elegant Integrations
+            </h4>
+            <ul class="p-0" style="list-style: none;">
+              <li class="fw-bold">
+                Rob Minasian, Owner
+              </li>
+              <li>
+                Phone: <a href="tel:+1-954-6482358">(954) 648-2358</a>
+              </li>
+              <li>
+                Email: <a href="mailto:Rob@ElegantIntegrations.com?subject=Inquiry">Rob@ElegantIntegrations.com</a>
+              </li>
+              <li>
+                Website: <a href="https://www.elegantintegrations.com" target="_blank">www.ElegantIntegrations.com</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Left side -->
+          <div class="col-md-6 text-start ps-5">
+            <div class="d-inline-flex flex-column">
+              <img class="border border-3 rounded border-primary mb-3 object-fit-scale shadow"
+                src="/assets/images/contact.avif" alt="">
+              <h2>For More Information</h2>
+              <div class="border-bottom border-2 mb-2"></div>
+              <form id="contactForm" action="">
+                <div class="mb-2">
+                  <input type="text" class="form-control" id="name" placeholder="Name" required>
+                </div>
+                <div class="mb-2">
+                  <input type="email" class="form-control" id="email" placeholder="Email" required>
+                </div>
+                <div class="mb-2">
+                  <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                </div>
+                <div class="mb-2">
+                  <textarea class="form-control" id="message" placeholder="Message" rows="5" style="resize: none;"
+                    required></textarea>
+                </div>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-orange text-white" type="button" onclick="sendEmail()">Submit</button>
+                </div>
+              </form>
+              <p class="text-center my-3 text-success visually-hidden" id="success">Your message has been sent
+                successfully!</p>
+              <p class="text-center my-3 text-danger visually-hidden" id="fail">Something went wrong. Please try again.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Section One -->
+
+    <div class="text-center my-5">
+      <img src="/assets/images/control4-dealer-icon.avif" alt="Control4 Gold Dealer" width="236" height="47">
+    </div>
+  </section>
+  <!-- END HERO -->
+
+  <!-- START FOOTER -->
+  <footer class="bg-primary py-5">
+    <div class="d-flex justify-content-evenly">
+      <div class="quick-links">
+        <p class="fw-bold" style="color: #FFD9A9;">Quick Links</p>
+        <ul class="p-0" style="list-style: none;">
+          <li>
+            <a href="/our-story/">About Us</a>
+          </li>
+          <li>
+            <a href="/services/">Services</a>
+          </li>
+          <li>
+            <a href="/products/">Products</a>
+          </li>
+          <li>
+            <a href="/reviews/">Reviews</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="home-automation">
+        <p class="fw-bold" style="color: #FFD9A9;">Home Automation</p>
+        <ul class="p-0" style="list-style: none;">
+          <li>
+            <a href="/services#audioVideo">Audio/Video</a>
+          </li>
+          <li>
+            <a href="/services#climate">Climate</a>
+          </li>
+          <li>
+            <a href="/services#lighting">Lighting</a>
+          </li>
+          <li>
+            <a href="/services#video">Video</a>
+          </li>
+          <li>
+            <a href="/services#music">Music</a>
+          </li>
+          <li>
+            <a href="/services#security">Security</a>
+          </li>
+          <li>
+            <a href="/services#communications">Communications</a>
+          </li>
+          <li>
+            <a href="/services#connection">Connection</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contact-us">
+        <p class="fw-bold" style="color: #FFD9A9;">Contact Us</p>
+        <ul class="p-0" style="list-style: none;">
+          <li class="fw-bold">
+            Rob Minasian, Owner
+          </li>
+          <li>
+            Phone: <a href="tel:+1-954-6482358">(954) 648-2358</a>
+          </li>
+          <li>
+            Email: <a href="mailto:Rob@ElegantIntegrations.com?subject=Inquiry">Rob@ElegantIntegrations.com</a>
+          </li>
+          <li>
+            Website: <a href="https://www.elegantintegrations.com" target="_blank">www.ElegantIntegrations.com</a>
+          </li>
+          <div style="height: 60px;"></div>
+          <div class="text-muted small">
+            <li>&copy; <span id="currentYear"></span> Elegant Integrations</li>
+            <li>Website Created By: Ethan Rubenstein</li>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- END FOOTER -->
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+
+  <!-- Local JS -->
+  <script src="/assets/js/index.js"></script>
+
+  <!-- Contact JS -->
+  <script src="/assets/js/contact.js"></script>
+</body>
+
+</html>
